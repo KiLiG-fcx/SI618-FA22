@@ -1,0 +1,4 @@
+1. The occurrence of word information grows quickly to a large amount when it was around 1900.
+2. 1505
+3. Most of the average word lengths are between 6.5-7. Seldom are below 6. 
+And as year goes on the average length is growing slightly longer, to above 7.
