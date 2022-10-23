@@ -1,0 +1,10 @@
+supports-lgbtq-movements1	0.7733333333333333	 opposes-some-lgbtq-movements1	0.3466666666666667	 neutral-lgbtq1 	0.64
+supports-lgbtq-movements2	0.4666666666666667	 opposes-some-lgbtq-movements2	0.05333333333333334	 neutral-lgbtq2	0.4266666666666667
+supports-lgbtq-movements3	0.17333333333333334	 opposes-some-lgbtq-movements3	0.0	 neutral-lgbtq3	0.12
+
+201806
+supports-lgbtq-movements-majority	0.525	opposes-some-lgbtq-movements-majority	0.05	neutral majority	0.375	no_majority	0.05
+201904
+supports-lgbtq-movements-majority	0.4	opposes-some-lgbtq-movements-majority	0.05714285714285714	neutral majority	0.4857142857142857	no_majority	0.05714285714285714
+
+targeted_supports-lgbtq-movements-majority	1.0	targeted_opposes-some-lgbtq-movements-majority	0.75	targeted_neutral-majority	0.71875

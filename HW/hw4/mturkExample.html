@@ -1,0 +1,89 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+  <crowd-instructions link-text="View instructions" link-type="button">
+    <short-summary>
+      <p>Please read the given comment and label it according to the dimensions described. 
+      All the dimensions relate to if/how people reason about their arguments during online political talk.</p>
+    </short-summary>
+
+    <detailed-instructions>
+    <h3>Please label content according to three dimensions</h3>
+    <p>You will label content according to three dimensions listed below.</p>
+      
+    <h4>Dimension 1: Level of Justification</h4>
+    <p>For this dimension, we’d like you to indicate if the writer gives any reasons 
+        (arguments or evidence) for his/her opinion, and if they make a connection between those 
+        reasons and his/her opinion. You can place a comment in one of three categories:<p>
+    <ul>
+    <li>No justification: The writer only expresses an opinion, 
+            but no reasons for that opinion are given.</li>
+    <li>Inferior justification: The writer gives a reason (or reasons) to support 
+            his/her opinion, but no connection is made between the opinion and the reason.
+            (Note: a reason does not need to be evidence based, objective or valid. Any attempt 
+            to explain an opinion suffices.)</li>
+    <li>Qualified justification:  The writer gives a reason (or reasons) to support 
+            their opinion and makes a connection for how that reason supports their opinion. 
+            (Note: neither the reason nor the connection need to be evidence-based or valid. 
+            Any attempt to provide a reason and make a connection suffices. A “connection” 
+            between a reason and an opinion also does not need to be explicit; that is, the writer 
+            doesn’t need to say “this reason will to X, because…”, as long as the connection should be 
+            fairly obvious to any reader.)</li>
+    </ul>
+    <h4>Dimension 2: Content of justification</h4>
+    <p>For this dimension, we would like you to decide if the reason given (if there is one) 
+        was one that appeals either only to narrow group interests or to the common good - or to neither.
+        Again, there are three possible categories:</p>
+    <ul>
+    <li>None or neutral: No reasons were given or the reasons did not reference either specific 
+            group interests, the common good or common values.</li>
+    <li>Reasons related to specific group interests: The reasons given were in terms 
+            of benefiting a particular group or aligning with the values of a particular group.</li>
+    <li>Reasons related to common good or common values: At least one of the reasons given 
+            is framed in terms of helping the common good (that is, everyone will benefit) or 
+            being in line with common values.</li>
+    </ul>
+    <h4>Dimension 3: Constructiveness</h4>
+    <p>The final dimension concerns consensus building, whether or not the writer made an 
+    attempt to find common ground or reach a compromise solution. For this dimension 
+    there are two categories:</p>
+    <ul>
+    <li>Positional: The writer is emphatic about his/her opinion. There is no attempt 
+        at compromise, reconciliation, or consensus building.</li>
+    <li>Constructive: The writer attempts to promote solutions or propositions that 
+        might be compromises or move toward agreement.</li>
+    </ul>
+    </detailed-instructions>
+    
+    
+  </crowd-instructions>
+
+  <div>
+    <p>Comment: ${comment}</p>
+    <p>Dimension 1: Level of Justification:</p>
+    <crowd-radio-group>
+	    <crowd-radio-button name="just" value="nojust">No justification</crowd-radio-button>
+	    <crowd-radio-button name="just2" value="infjust">Inferior justification</crowd-radio-button>
+	    <crowd-radio-button name="just3" value="qualjust">Qualified justification</crowd-radio-button>
+	</crowd-radio-group>
+    <p>Dimension 2: Content of justification:</p>
+    <crowd-radio-group>
+	    <crowd-radio-button name="content" value="none">None or neutral</crowd-radio-button>
+	    <crowd-radio-button name="content2" value="specificgroup">Reasons related to specific group interests</crowd-radio-button>
+	    <crowd-radio-button name="content3" value="commonvalue">Reasons related to common good or common values</crowd-radio-button>
+	</crowd-radio-group>
+	<p>Dimension 3: Constructiveness:</p>
+    <crowd-radio-group>
+	    <crowd-radio-button name="construct" value="posit">Positional </crowd-radio-button>
+	    <crowd-radio-button name="construct2" value="constructive">Constructive</crowd-radio-button>
+	</crowd-radio-group>
+  </div>
+
+  
+</crowd-form>
